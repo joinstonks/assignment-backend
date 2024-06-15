@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
+const db = require('./models');
 
 dotenv.config();
 
@@ -10,6 +11,13 @@ app.get('/', (req, res) => {
     res.send('Hello Stonks!');
 });
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+db.sequelize.authenticate().then(() => {
+    try {
+        app.listen(port, () => {
+            console.log(`Server is running on http://localhost:${port}`);
+        });
+    }
+    catch (error) {
+        console.error('Error:', error);
+    }
 });
