@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "moon",
-    "database": "stonks_db",
+    "database": "postgres",
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
@@ -10,7 +10,7 @@
   "test": {
     "username": "postgres",
     "password": "moon",
-    "database": "stonks_db",
+    "database": "postgres",
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
@@ -18,8 +18,8 @@
   "production": {
     "username": "postgres",
     "password": "moon",
-    "database": "stonks_db",
-    "host": "127.0.0.1",
+    "database": "postgres",
+    "host": "localhost",
     "port": 5432,
     "dialect": "postgres"
   }

@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.send('Hello Stonks!');
 });
 
-db.sequelize.authenticate().then(() => {
+db.sequelize.sync().then(() => {
     try {
         app.listen(port, () => {
             console.log(`Server is running on http://localhost:${port}`);
